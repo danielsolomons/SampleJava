@@ -18,25 +18,25 @@ maven-build:
     paths:
       - target/*.jar
 
-test-reports:
+unit-testing:
   
   stage: test
   script:
-  - mvn verify
+  - mvn test
   
   artifacts:
     reports:
       junit:
         - target/surefire-reports/TEST-*.xml
 
-unit-test:
+code-coverage:
   stage: test
   script:
-    - mvn $MAVEN_CLI_OPTS test
-    - cat target/site/jacoco/index.html
+    - 
+    - 
   artifacts:
     paths:
-      - target/site/jacoco/
+      - target/
 
 
   only:
