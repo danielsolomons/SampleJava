@@ -31,9 +31,7 @@ unit-testing:
 
 code-coverage:
   stage: test
-  script:
-    - 
-    - 
+  
   artifacts:
     paths:
       - target/
