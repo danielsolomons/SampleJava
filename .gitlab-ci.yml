@@ -31,10 +31,13 @@ unit-testing:
 
 code-coverage:
   stage: test
-  
+  script:
+    - mvn $MAVEN_CLI_OPTS test
+    - cat target/site/jacoco/index.html
   artifacts:
     paths:
-      - target/
+      - target/site/jacoco/
+
 
 
   only:
