@@ -73,5 +73,10 @@
     <maven.compiler.source>1.6</maven.compiler.source>
     <maven.compiler.target>1.6</maven.compiler.target>
   </properties>
-  
+  <scm>
+    <connection>scm:git:${env.CI_REPOSITORY_URL}</connection>
+    <url>${env.CI_PROJECT_URL}</url>
+    <developerConnection>scm:git:${env.CI_REPOSITORY_URL}</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
 </project>
