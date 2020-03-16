@@ -29,6 +29,14 @@ unit-testing:
     reports:
       junit:
         - target/surefire-reports/TEST-*.xml
+        
+Publish:
+
+  stage: package
+  script:
+    - 'cp ci_settings.xml /root/.m2/settings.xml'
+    - 'mvn deploy'
+        
 
 code-coverage:
   stage: test
