@@ -1,4 +1,4 @@
-pipeline_template = "maven-template"
+pipeline_templates = "maven-template"
 libraries{
     maven{
   }
